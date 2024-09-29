@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ramith Nanayakkara">
+    <meta name="description" content="Learning how to save an Object into a Realtime Firebase DB.">
+    <title>Saving Objects to Firebase Realtime DB</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="main.js" defer></script>
+    <script type="module" src="firebase.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Astron Eng Pvt Ltd - Saving Objects to Firebase Realtime DB</h1>
+    </header>
+    <hr>
+    <main>
+        <!-- Data entry/update sec -->
+        <section>
+            <h2>Product Control</h2>
+            <form action="" id="product-form">
+                <fieldset>
+                    <legend id="legID">NEW PRODUCT ENTRY</legend>
+                    <label for="code">Code</label>
+                    <input type="text" name="code" id="code" placeholder="product code">
+                    <br>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="product name">
+                    <br>
+                    <label for="qty">QTY</label>
+                    <input type="number" name="qty" id="qty" step="1" placeholder="0">
+                    <br>
+                    <label for="price">Price</label>
+                    <input type="number" name="price" id="price" step="0.5" placeholder="0.00">
+                    <br>
+                    <label for="desc">Description</label>
+                    <br>
+                    <textarea name="desc" id="desc" cols="30" rows="8" placeholder="product description..."></textarea>
+                    <br><br>
+                    <button id="create">CREATE</button>
+                    <button id="update">UPDATE</button>
+                </fieldset>
+            </form>
+        </section>
+        <!-- Products Table -->
+        <section>
+            <br>
+            <table>
+                <caption>PRODUCT LIST</caption>
+                <thead>
+                    <tr>
+                        <th colspan="3" scope="col">PRODUCT</th>
+                        <th colspan="2" scope="col">QTY & PRICE</th>
+                        <th>CTRL</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- <tr>
+                        <td>JBLSP</td>
+                        <td>JBL Speaker</td>
+                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td>3</td>
+                        <td>$35.99</td>
+                        <td>
+                            <button id="edit">EDIT</button>
+                            <button id="del">DEL</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Instrcution goes here.</p>
+    </footer>
+</body>
+</html>

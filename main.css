@@ -1,0 +1,9 @@
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+th, td {
+    border: 1px solid whitesmoke;
+    padding: 0.5rem;
+}
