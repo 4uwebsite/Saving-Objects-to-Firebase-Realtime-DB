@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Driver Profile</title>
+</head>
+<body>
+</body>
+
+<script>
+    const driverNum = 63
+
+    // POSITION
+    // Get current position of the specified driver of the latest session.
+    function getDriverPosition(driverNumber) {
+        fetch(`https://api.openf1.org/v1/position?session_key=latest&driver_number=${driverNumber}`)
+            .then(response => response.json())
+            .then(data => console.log("position: " + data[0].position))
+            .catch(error => console.error('Error fetching data:', error));
+    }
+    getDriverPosition(driverNum)
+
+    // DRIVER
+    // Get driver name_acronym for latest session by specifying driver number.
+    function getDriverNameAcronym(driverNumber) {
+        fetch(`https://api.openf1.org/v1/drivers?driver_number=${driverNumber}&session_key=latest`)
+            .then(response => response.json())
+            .then(data => console.log("name_acronym: " + data[0].name_acronym))
+            .catch(error => console.error('Error fetching data:', error));
+    }
+    getDriverNameAcronym(driverNum)
+    
+    // INTERVAL
+    // Get driver gap_to_leader & interval for latest session by specifying driver number.
+    function getDriverIntervalData(driverNumber) {
+        fetch(`https://api.openf1.org/v1/intervals?session_key=latest&driver_number=${driverNumber}`)
+            .then(response => response.json())
+            .then(data => console.log(("gap_to_leader: " + data[data.length-1].gap_to_leader) + " interval: " + data[data.length-1].interval))
+            .catch(error => console.error('Error fetching data:', error));
+    }
+    getDriverIntervalData(driverNum)
+</script>
+
+</html>

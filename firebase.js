@@ -39,7 +39,7 @@ export function updateProd(key, obj) {
     // productsInDBKey.update(obj)
     update(productsInDBKey, obj)
         .then(() => {
-            console.log("Item updated successfully!")
+            // console.log("Item updated successfully!")
             document.getElementById('code').value = ''
             document.getElementById('name').value = ''
             document.getElementById('qty').value = ''

@@ -1,9 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    background-color: #333;
     color: whitesmoke;
+    background-color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #242424;
+    padding: 0.5em 0;
+}
+
+hr {
+    margin-bottom: 2em;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 3em;
+}
+
+.prod-ctrl {
+    background-color: #242424;
+    padding: 1em 2em 2em 2em;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: rgb(212, 211, 211);
+    font-weight: 100;
+}
+
+fieldset {
+    padding: 1em;
+}
+
+legend {
+    font-weight: 900;
+    padding: 0 1em;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 5em;
+}
+
+input, textarea {
+    border: 1px solid whitesmoke;
+    padding: 0.5em;
+    color: whitesmoke;
+    background-color: #242424;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+textarea {
+    width: 18em;
+}
+
+button {
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0.1em;
+}
+
+.blue {
+    background-color: rgb(32, 32, 246);
+    color: whitesmoke;
+}
+
+.edit, .del {
+    font-size: 0.7rem;
+    color: whitesmoke;
+}
+
+.edit {
+    background-color: green;
+}
+
+.del {
+    background-color: red;
+}
+
+caption {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+thead {
+    background-color: #242424;
 }
 
 th, td {
     border: 1px solid whitesmoke;
     padding: 0.5rem;
+}
+
+/* Apply background color to even rows */
+tr:nth-child(even) {
+    background-color: #000;
 }
