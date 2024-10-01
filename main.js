@@ -103,7 +103,6 @@ function initializeGetProduct(key) {
 
 updateBtn.addEventListener('click', (event) => {
     event.preventDefault()
-    console.log("Test")
     // Create product object.
     const product = {
         // key: document.getElementById('legID').innerText,
@@ -113,7 +112,6 @@ updateBtn.addEventListener('click', (event) => {
         price: document.getElementById('price').value,
         desc: document.getElementById('desc').value
     }
-    console.log(product)
     const key = document.getElementById('legID').innerText
     updateProd(key, product)
 })

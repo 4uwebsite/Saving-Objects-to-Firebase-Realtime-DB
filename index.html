@@ -13,18 +13,19 @@
 </head>
 <body>
     <header>
-        <h1>Astron Eng Pvt Ltd - Saving Objects to Firebase Realtime DB</h1>
+        <h1>ASTRON ENGINEERING (PVT) LTD</h1>
+        <p class="subtitle">Saving Objects to Firebase Realtime DB</p>
     </header>
     <hr>
     <main>
         <!-- Data entry/update sec -->
-        <section>
+        <section class="prod-ctrl">
             <h2>Product Control</h2>
-            <form action="" id="product-form">
+            <form id="product-form">
                 <fieldset>
                     <legend id="legID">NEW PRODUCT ENTRY</legend>
                     <label for="code">Code</label>
-                    <input type="text" name="code" id="code" placeholder="product code">
+                    <input type="text" name="code" id="code" placeholder="product code" autofocus>
                     <br>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="product name">
@@ -39,8 +40,8 @@
                     <br>
                     <textarea name="desc" id="desc" cols="30" rows="8" placeholder="product description..."></textarea>
                     <br><br>
-                    <button id="create">CREATE</button>
-                    <button id="update">UPDATE</button>
+                    <button id="create" class="blue">CREATE</button>
+                    <button id="update" class="blue">UPDATE</button>
                 </fieldset>
             </form>
         </section>
@@ -71,9 +72,10 @@
                 </tbody>
             </table>
         </section>
-    </main>
-    <footer>
         <p>Instrcution goes here.</p>
-    </footer>
+    </main>
+    <!-- <footer>
+        <p>Instrcution goes here.</p>
+    </footer> -->
 </body>
 </html>
